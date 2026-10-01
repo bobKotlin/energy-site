@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk" class="no-js" data-brand-name="NRGT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-агент — консультація й план системи накопичення</title>
+<meta name="description" content="AI-консультант розпитає про ваш об’єкт, підбере накопичувач з нашого складу, пояснить, як його встановлять, і передасть готовий план інженеру. Або швидкий підбір за три питання.">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%230B0E0D'/%3E%3Crect x='4' y='9' width='19' height='12' rx='3' fill='none' stroke='%23EAF0EC' stroke-width='1.8'/%3E%3Crect x='24' y='12.5' width='2.4' height='5' rx='1' fill='%23EAF0EC'/%3E%3Cpath d='M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z' fill='%23C9F25C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v=1790850554">
+
+</head>
+<body data-page="assistant">
+<a class="skip" href="#main">Перейти до вмісту</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="logo" aria-label="На головну"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a>
+    <nav class="nav" aria-label="Основна навігація"><a href="equipment.html">Каталог</a><a href="calculator.html">Калькулятор</a><a href="assistant.html" aria-current="page">AI-агент</a><a href="turnkey.html">Монтаж</a></nav>
+    <div class="hdr__r">
+      <button class="lang" type="button" aria-label="Мова: українська. EN — у робочій версії">UA<span> / EN</span></button>
+      <a href="request.html" class="acct cartbtn" aria-label="Заявка"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg><span class="cartbtn__n" data-cart-count hidden>0</span></a>
+      <a href="account.html" class="acct" aria-label="Особистий кабінет"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.3-3.6 4.2-5.4 7.5-5.4s6.2 1.8 7.5 5.4"/></svg></a>
+      <a href="assistant.html" class="btn btn--volt btn--sm magnetic"><span>Підібрати систему</span></a>
+      <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mnav"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Меню"><a href="equipment.html">Каталог<small>ціни й наявність</small></a><a href="calculator.html">Калькулятор<small>економія й резерв</small></a><a href="assistant.html" aria-current="page">AI-агент<small>підбір і план монтажу</small></a><a href="turnkey.html">Монтаж<small>під ключ</small></a><a href="request.html">Заявка<small data-cart-count hidden>0</small></a><a href="account.html">Кабінет<small>вхід</small></a><a class="btn btn--volt btn--block" href="assistant.html"><span>Підібрати систему</span></a></nav>
+<main id="main">
+<section class="phero phero--sm">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Шлях"><a href="index.html">Головна</a><span aria-hidden="true">/</span><span>AI-агент</span></nav>
+    <h1 data-split>AI-<em>агент</em></h1>
+    <p class="lead">Розпитає про ваш об’єкт, підбере систему з того, що є на складі, покаже, як її встановлять, і передасть готовий план інженеру.</p>
+  </div>
+</section>
+<section class="sec--tight" style="padding-top:0" aria-label="AI-агент">
+  <div class="wrap">
+    <div class="amodes" id="aModes" role="tablist" aria-label="Режим" hidden>
+      <button type="button" role="tab" id="tabAgent" aria-controls="asstAgent" aria-selected="true">AI-консультант<small>розмова й план для інженера</small></button>
+      <button type="button" role="tab" id="tabDemo" aria-controls="asstDemo" aria-selected="false">Швидкий підбір<small>3 питання · безкоштовно</small></button>
+    </div>
+  </div>
+  <div class="wrap asst" id="asstAgent" role="tabpanel" aria-labelledby="tabAgent" hidden>
+    <div class="panel asst__chat ag">
+      <div class="asst__top">
+        <div class="asst__who"><span class="av" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8.9 2 4.6 8.6h3.2L6.9 14l4.5-6.6H8.2z" fill="currentColor"/></svg></span><div><b>AI-консультант</b><small id="agState">консультація й план для інженера</small></div></div>
+        <button class="btn btn--ghost btn--sm" id="agNew" type="button"><span>Нова розмова</span></button>
+      </div>
+      <div class="msgs" id="agMsgs" data-lenis-prevent aria-live="polite"></div>
+      <div class="asst__quick" id="agQuick"></div>
+      <button class="btn btn--ghost btn--sm asst__jump" id="agJump" type="button" hidden><span>Система й план ↓</span></button>
+      <form class="composer ag__composer" id="agForm"><label class="sr-only" for="agText">Ваше повідомлення</label><textarea class="textarea" id="agText" rows="1" maxlength="2000" placeholder="Опишіть об’єкт або поставте питання"></textarea><button class="btn btn--volt" id="agSend" type="submit"><span>Надіслати</span></button></form>
+      <p class="ag__meta" id="agMeta"></p>
+    </div>
+    <div class="asst__plan panel" id="agPlan" aria-live="polite">
+      <div class="plan-empty">
+        <p class="eyebrow">Проєкт</p>
+        <h2 class="plan__t">Тут з’явиться ваша система й план</h2>
+        <ol class="psteps plan-empty__l"><li>Консультант розпитає про об’єкт і що має працювати під час відключень</li><li>Підбере систему з нашого складу — з фото, цінами й запасом годин</li><li>Пояснить, де вона стоятиме, як її підключать і що з документами</li><li>Передасть план інженеру — той домовиться з вами про огляд</li></ol>
+      </div>
+    </div>
+  </div>
+  <div class="wrap asst" id="asstDemo" role="tabpanel" aria-labelledby="tabDemo">
+    <div class="panel asst__chat">
+      <div class="asst__top">
+        <div class="asst__who"><span class="av" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8.9 2 4.6 8.6h3.2L6.9 14l4.5-6.6H8.2z" fill="currentColor"/></svg></span><div><b>Швидкий підбір</b><small>три питання · план монтажу</small></div></div>
+        <button class="btn btn--ghost btn--sm" id="asstReset" type="button"><span>Почати спочатку</span></button>
+      </div>
+      <div class="msgs" id="aMsgs" data-lenis-prevent aria-live="polite"></div>
+      <div class="asst__quick" id="aQuick"></div>
+      <button class="btn btn--ghost btn--sm asst__jump" id="aPlanJump" type="button" hidden><span>План проєкту ↓</span></button>
+      <form class="composer" id="aForm"><label class="sr-only" for="aAsk">Ваше питання</label><input class="input" id="aAsk" autocomplete="off" maxlength="300" placeholder="Запитайте про систему, монтаж чи документи"><button class="btn btn--volt" type="submit"><span>Надіслати</span></button></form>
+    </div>
+    <div class="asst__plan panel" id="aPlan" aria-live="polite">
+      <div class="plan-empty">
+        <p class="eyebrow">План проєкту</p>
+        <h2 class="plan__t">Тут з’явиться план вашої системи</h2>
+        <ol class="psteps plan-empty__l"><li>Що встановимо — моделі з фото й цінами</li><li>Де стоятиме — розміри, вага, умови</li><li>Як підключимо — схема з реальних пристроїв</li><li>Як пройде монтаж — крок за кроком</li><li>Документи — що оформлювати</li><li>Після запуску — застосунок, гарантія, сервіс</li></ol>
+      </div>
+    </div>
+  </div>
+  <div class="wrap"><p class="disclaimer" id="aDisclaimer" data-agent="Відповідає мовна модель Claude (Anthropic) на основі нашого каталогу й довідника. Ціни орієнтовні; склад, ціну й строк фіксує пропозиція після огляду. Не надсилайте паспортних даних і даних карток." data-demo="Швидкий підбір працює без ШІ: відповіді складаються з характеристик моделей нашого каталогу й типових значень. Складні питання передаємо інженеру.">Швидкий підбір працює без ШІ: відповіді складаються з характеристик моделей нашого каталогу й типових значень. Складні питання передаємо інженеру.</p></div>
+</section>
+<dialog class="dlg dlg--pack" id="packDlg" aria-labelledby="packT">
+  <div class="dlg__in">
+    <div class="dlg__top"><div><p class="eyebrow"><b>●</b> Для загальних зборів</p><h2 id="packT">Пакет для ОСББ</h2></div><button class="icon-btn" id="packX" type="button" aria-label="Закрити"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button></div>
+    <div class="pack" id="pack"></div>
+    <div class="dlg__acts"><button class="btn btn--volt" id="packPrint" type="button"><span>Друкувати або зберегти PDF</span></button></div>
+  </div>
+</dialog>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div><a href="index.html" class="logo"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a><p style="margin:14px 0 0;max-width:300px;line-height:1.6">Накопичувачі енергії з монтажем під ключ — для квартир, домів, ОСББ і бізнесу.</p></div>
+      <div><h4>Обладнання</h4><ul><li><a href="equipment.html">Каталог</a></li><li><a href="equipment.html?cat=kits">Готові комплекти</a></li><li><a href="equipment.html?who=osbb">Для ОСББ</a></li></ul></div>
+      <div><h4>Послуги</h4><ul><li><a href="turnkey.html">Монтаж під ключ</a></li><li><a href="calculator.html">Калькулятор</a></li><li><a href="assistant.html">AI-агент проєкту</a></li></ul></div>
+      <div><h4>Кабінет</h4><ul><li><a href="request.html">Заявка</a></li><li><a href="account.html">Мій кабінет</a></li><li><a href="login.html">Вхід</a></li></ul></div>
+    </div>
+    <div class="foot__bot"><span>© 2026 <span data-brand>NRGT</span> · прототип</span><span>Ціни орієнтовні, з ПДВ. Остаточні ціну й строк фіксуємо в пропозиції.</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="assets/js/core.js?v=1790850554"></script>
+<script src="assets/js/shop.js?v=1790850554"></script>
+<script src="assets/js/products.js?v=1790850554"></script>
+<script src="assets/js/kits.js?v=1790850554"></script>
+<script src="assets/js/agent-config.js?v=1790850554"></script>
+<script src="assets/js/agent.js?v=1790850554"></script>
+<script src="assets/js/assistant.js?v=1790850554"></script>
+</body>
+</html>

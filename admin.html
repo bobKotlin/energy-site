@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uk" class="no-js" data-brand-name="NRGT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Панель команди — заявки, об’єкти, техніка</title>
+<meta name="description" content="Робоче місце команди: заявки й фінальні ціни, об’єкти клієнтів, техніка після монтажу.">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%230B0E0D'/%3E%3Crect x='4' y='9' width='19' height='12' rx='3' fill='none' stroke='%23EAF0EC' stroke-width='1.8'/%3E%3Crect x='24' y='12.5' width='2.4' height='5' rx='1' fill='%23EAF0EC'/%3E%3Cpath d='M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z' fill='%23C9F25C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v=1790850554">
+<link rel="stylesheet" href="assets/css/cabinet.css?v=1790850554">
+
+</head>
+<body data-page="admin">
+<a class="skip" href="#main">Перейти до вмісту</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="logo" aria-label="На головну"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a>
+    <nav class="nav" aria-label="Основна навігація"><a href="equipment.html">Каталог</a><a href="calculator.html">Калькулятор</a><a href="assistant.html">AI-агент</a><a href="turnkey.html">Монтаж</a></nav>
+    <div class="hdr__r">
+      <button class="lang" type="button" aria-label="Мова: українська. EN — у робочій версії">UA<span> / EN</span></button>
+      <a href="request.html" class="acct cartbtn" aria-label="Заявка"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg><span class="cartbtn__n" data-cart-count hidden>0</span></a>
+      <a href="account.html" class="acct" aria-label="Особистий кабінет"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.3-3.6 4.2-5.4 7.5-5.4s6.2 1.8 7.5 5.4"/></svg></a>
+      <a href="assistant.html" class="btn btn--volt btn--sm magnetic"><span>Підібрати систему</span></a>
+      <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mnav"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Меню"><a href="equipment.html">Каталог<small>ціни й наявність</small></a><a href="calculator.html">Калькулятор<small>економія й резерв</small></a><a href="assistant.html">AI-агент<small>підбір і план монтажу</small></a><a href="turnkey.html">Монтаж<small>під ключ</small></a><a href="request.html">Заявка<small data-cart-count hidden>0</small></a><a href="account.html">Кабінет<small>вхід</small></a><a class="btn btn--volt btn--block" href="assistant.html"><span>Підібрати систему</span></a></nav>
+<main id="main">
+<section class="cab">
+  <div class="wrap">
+    <div class="cab__head">
+      <div class="cab__id">
+        <nav class="crumbs" aria-label="Шлях"><a href="index.html">Головна</a><span aria-hidden="true">/</span><a href="account.html">Кабінет</a><span aria-hidden="true">/</span><span>Команда</span></nav>
+        <div class="cab__site"><h1>Панель команди</h1></div>
+        <p class="cab__meta" id="admMeta">Заявки й фінальні ціни, об’єкти клієнтів, техніка після монтажу.</p>
+      </div>
+      <div class="cab__me"><span class="muted" id="admWho"></span><a class="btn btn--ghost btn--sm" href="account.html"><span>Мій кабінет</span></a></div>
+    </div>
+    <div class="cab__tabs" id="admTabs" role="tablist" aria-label="Розділи панелі">
+      <button type="button" role="tab" data-tab="orders" aria-selected="true">Заявки й замовлення</button>
+      <button type="button" role="tab" data-tab="sites" aria-selected="false" tabindex="-1">Об’єкти й техніка</button>
+      <button type="button" role="tab" data-tab="users" aria-selected="false" tabindex="-1">Люди</button>
+    </div>
+    <div class="cab__view" id="admView" role="tabpanel" aria-live="polite"><div class="panel box cab-empty"><p class="hint">Завантажуємо…</p></div></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div><a href="index.html" class="logo"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a><p style="margin:14px 0 0;max-width:300px;line-height:1.6">Накопичувачі енергії з монтажем під ключ — для квартир, домів, ОСББ і бізнесу.</p></div>
+      <div><h4>Обладнання</h4><ul><li><a href="equipment.html">Каталог</a></li><li><a href="equipment.html?cat=kits">Готові комплекти</a></li><li><a href="equipment.html?who=osbb">Для ОСББ</a></li></ul></div>
+      <div><h4>Послуги</h4><ul><li><a href="turnkey.html">Монтаж під ключ</a></li><li><a href="calculator.html">Калькулятор</a></li><li><a href="assistant.html">AI-агент проєкту</a></li></ul></div>
+      <div><h4>Кабінет</h4><ul><li><a href="request.html">Заявка</a></li><li><a href="account.html">Мій кабінет</a></li><li><a href="login.html">Вхід</a></li></ul></div>
+    </div>
+    <div class="foot__bot"><span>© 2026 <span data-brand>NRGT</span> · прототип</span><span>Ціни орієнтовні, з ПДВ. Остаточні ціну й строк фіксуємо в пропозиції.</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="assets/js/core.js?v=1790850554"></script>
+<script src="assets/js/shop.js?v=1790850554"></script>
+<script src="assets/js/products.js?v=1790850554"></script>
+<script src="assets/js/app-config.js?v=1790850554"></script>
+<script src="assets/js/api.js?v=1790850554"></script>
+<script src="assets/js/staff.js?v=1790850554"></script>
+</body>
+</html>
