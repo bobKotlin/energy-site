@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" class="no-js" data-brand-name="NRGT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battery storage calculator — savings and backup</title>
+<meta name="description" content="Your bill with and without storage, the payback and hours in an outage — for homes, businesses and industry.">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%230B0E0D'/%3E%3Crect x='4' y='9' width='19' height='12' rx='3' fill='none' stroke='%23EAF0EC' stroke-width='1.8'/%3E%3Crect x='24' y='12.5' width='2.4' height='5' rx='1' fill='%23EAF0EC'/%3E%3Cpath d='M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z' fill='%23C9F25C'/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="uk" href="../calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css?v=1791664617">
+<script>(function(h){try{var c=/(?:^|;\s*)in=1(?:;|$)/.test(document.cookie);if(c)h.classList.add('is-in');else localStorage.removeItem('nrgt-me');if(sessionStorage.getItem('nrgt-warm'))h.classList.add('is-warm');sessionStorage.setItem('nrgt-warm','1')}catch(e){}})(document.documentElement)</script>
+<script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/api/*"}}]},"eagerness":"moderate"}]}</script>
+
+</head>
+<body data-page="calculator">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="logo" aria-label="Home"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="equipment.html">Catalogue</a><a href="calculator.html" aria-current="page">Calculator</a><a href="assistant.html">AI agent</a><a href="turnkey.html">Installation</a></nav>
+    <div class="hdr__r">
+      <a class="lang" href="../calculator.html" hreflang="uk" lang="uk" data-lang-switch aria-label="Українська версія"><span>UA / </span>EN</a>
+      <a href="request.html" class="acct cartbtn" aria-label="Request"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg><span class="cartbtn__n" data-cart-count hidden>0</span></a>
+      <a href="login.html" class="hdr-login" data-login>Sign in</a>
+      <a href="account.html" class="acct" data-acct hidden aria-label="My account"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.3-3.6 4.2-5.4 7.5-5.4s6.2 1.8 7.5 5.4"/></svg><i class="acct__dot" hidden></i></a>
+      <a href="assistant.html" class="btn btn--volt btn--sm magnetic"><span>Find a system</span></a>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu"><a href="equipment.html">Catalogue<small>prices & stock</small></a><a href="calculator.html" aria-current="page">Calculator<small>savings & backup</small></a><a href="assistant.html">AI agent<small>pick & plan</small></a><a href="turnkey.html">Installation<small>turnkey</small></a><a href="request.html">Request<small data-cart-count hidden>0</small></a><a href="login.html" data-acct-m data-in="Account">Sign in<small>or sign up</small></a><a href="../calculator.html" hreflang="uk" lang="uk" data-lang-switch>Українська<small>UA</small></a><a class="btn btn--volt btn--block" href="assistant.html"><span>Find a system</span></a></nav>
+<script>(function(d){try{var h=d.documentElement,ls=localStorage,ss=sessionStorage,me=h.classList.contains('is-in')&&JSON.parse(ls.getItem('nrgt-me')||'null');function k(p){var x=JSON.parse(ss.getItem('nrgt-api:'+p)||'null');return x&&JSON.parse(x.s)}var n=0;JSON.parse(ls.getItem('bess-cart')||'[]').forEach(function(x){n+=+x.qty||1});d.querySelectorAll('[data-cart-count]').forEach(function(e){e.textContent=n;e.hidden=!n});if(!h.classList.contains('is-in'))return;d.querySelectorAll('[data-login]').forEach(function(e){e.hidden=true});d.querySelectorAll('[data-acct]').forEach(function(a){a.hidden=false;a.classList.add('is-in');if(!me)return;var i=d.createElement('span');i.className='acct__ini';i.setAttribute('aria-hidden','true');i.textContent=me.ini;a.appendChild(i);a.setAttribute('aria-label','Account: '+me.name);var u=k('/unread'),dt=a.querySelector('.acct__dot');if(dt&&u&&u.total)dt.hidden=false});var m=d.querySelector('[data-acct-m]');if(m){m.href='account.html';m.firstChild.textContent=m.getAttribute('data-in');var sm=m.querySelector('small');if(sm)sm.textContent=me&&me.name||'signed in'}var host=d.querySelector('.hdr__r'),ac=d.querySelector('[data-acct]');if(me&&me.warn&&host&&ac){var w=d.createElement('div');w.className='vchip';w.setAttribute('data-vchip','');w.innerHTML='<button class="vchip__b" type="button" aria-expanded="false"><i aria-hidden="true"></i><span>Confirm e-mail</span></button><div class="vchip__pop"></div>';host.insertBefore(w,ac)}if(!me||!me.staff)return;var pu=k('/staff/pulse'),c=pu?(pu.new_orders||0)+(pu.unread||0):0;if(!host||!ac)return;var a=d.createElement('a');a.className='hdr-panel';a.href='admin.html';a.setAttribute('data-panel-link','');var s=d.createElement('span');s.textContent=me.admin?'Admin':'Panel';var b=d.createElement('b');b.className='hdr-panel__n';b.textContent=c?String(c):'';b.hidden=!c;a.append(s,b);host.insertBefore(a,ac);var mn=d.getElementById('mnav');if(mn){var ma=d.createElement('a');ma.href='admin.html';ma.append(d.createTextNode(me.admin?'Admin panel':'Manager panel'));var q=d.createElement('small');q.className='hdr-panel__m';q.textContent=c?String(c):'';ma.appendChild(q);mn.insertBefore(ma,mn.querySelector('.btn')||null)}}catch(e){}})(document)</script>
+<main id="main">
+<section class="phero phero--sm">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Calculator</span></nav>
+    <h1 data-split>Battery <em>storage</em> calculator</h1>
+    <p class="lead">Charge in cheap hours, run on it in expensive ones.</p>
+  </div>
+</section>
+
+<section class="sec--tight" style="padding-top:0" aria-label="Calculation">
+  <div class="wrap">
+    <div class="calc">
+      <form class="panel inputs" id="form" aria-label="Calculation inputs" onsubmit="return false">
+        <div class="f"><div class="f__l" id="whoL">Who it’s for</div>
+          <div class="seg" id="segWho" role="group" aria-labelledby="whoL"><button type="button" data-v="home">Home</button><button type="button" data-v="biz">Business</button><button type="button" data-v="ind">Industry</button></div></div>
+        <div class="opts" id="optsSite"></div>
+        <p class="inputs__h">Battery storage</p>
+        <div class="opts" id="optsSys"></div>
+        <div class="kitnote" id="kitnote" hidden></div>
+      </form>
+
+      <div class="work">
+        <div class="stage dayviz" id="dayviz" aria-label="A day with storage">
+          <div class="hud">
+            <div class="hud__time">
+              <div class="hud__row">
+                <div class="clock" aria-hidden="true"><em id="cH" style="font-style:normal">00</em><span>:</span><em id="cM" style="font-style:normal">00</em></div>
+                <div class="status" id="status" data-l="mid"><i aria-hidden="true"></i><span id="stTxt">—</span></div>
+                <button type="button" class="icon-btn" id="play" aria-label="Pause"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1" fill="currentColor"/><rect x="9.4" y="3" width="2.6" height="10" rx="1" fill="currentColor"/></svg></button>
+                <button type="button" class="icon-btn" id="replay" aria-label="Restart the day"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.5"/><path d="M3 2.5V5h2.5"/></svg></button>
+              </div>
+            </div>
+            <div class="hud__cfg"><small>Savings per day</small><b id="saveDay">—</b></div>
+          </div>
+          <div class="daycard" id="daycard"><div class="daycard__in"><small id="dcSeason">Savings per day</small><b id="dcNet">+₴0</b>
+            <dl class="daycard__kpi"><div><dt>Per year</dt><dd id="dcYear">—</dd></div><div><dt>Payback</dt><dd id="dcPb">—</dd></div><div><dt>In an outage</dt><dd id="dcBack">—</dd></div></dl></div></div>
+        </div>
+        <dl class="ledger">
+          <div><dt id="lgAt"><i style="background:#56645D" aria-hidden="true"></i>Without storage</dt><dd id="lgA">₴0</dd></div>
+          <div><dt id="lgBt"><i style="background:#C9F25C" aria-hidden="true"></i>With storage</dt><dd id="lgB">₴0</dd></div>
+          <div class="sum"><dt id="lgNt">Savings</dt><dd id="lgN">₴0</dd></div>
+        </dl>
+        <div class="profbar" id="profBar">
+          <div class="profbar__row"><span class="profbar__l" id="profL">Usage pattern</span>
+            <div class="seg seg--opt" id="segProf" role="group" aria-labelledby="profL"><button type="button" data-v="flat" title="The same every hour">24/7</button><button type="button" data-v="work" title="Full load in working hours; ≈ 12 % at night, ≈ 4 % otherwise">Working hours</button><button type="button" data-v="best" title="Best case: more of the use falls in expensive hours">Best case</button></div></div>
+          <div class="profbar__row" id="profHours"><span class="profbar__l" id="hoursL">Hours</span>
+            <div class="seg seg--opt" id="segHours" role="group" aria-labelledby="hoursL"><button type="button" data-h="6-12">06–12</button><button type="button" data-h="8-18">08–18</button><button type="button" data-h="8-20">08–20</button><button type="button" data-h="6-24">06–24</button></div>
+            <div class="opt__hours"><span>from</span><div class="select"><select id="hFrom" aria-label="Start of working hours"></select></div><span>to</span><div class="select"><select id="hTo" aria-label="End of working hours"></select></div></div></div>
+        </div>
+        <div class="charts" id="charts">
+          <figure class="ch"><div class="ch__h"><span class="ch__t">Price by hour</span><span class="lgd"><span><i style="background:rgba(26,153,174,.55)"></i>charging</span><span><i style="background:rgba(128,164,48,.6)"></i>from storage</span></span><span class="ch__u">₴/kWh <span class="ctag" id="pVat">incl. VAT</span> <span class="ctag" id="pPeriod" hidden>30 days</span></span></div><svg id="svP" viewBox="0 0 600 200" role="img" aria-label="Hourly price with the charging and discharging hours highlighted"></svg></figure>
+          <figure class="ch"><div class="ch__h"><span class="ch__t">Where energy comes from</span><span class="lgd"><span><i style="background:#56645D"></i>grid</span><span><i style="background:#80A430"></i>storage</span><span><i style="background:#1A99AE"></i>charging</span></span><span class="ch__u" id="unitE">kWh</span></div><svg id="svE" viewBox="0 0 600 200" role="img" aria-label="Use by hour: from the grid, from storage and to charging"></svg></figure>
+          <div class="tip" id="tip" role="status"></div>
+          <div class="sr-only"><table id="dayTable"><caption>Hourly data for the day</caption><thead><tr><th>Hour</th><th>Price, ₴/kWh</th><th>Consumption</th><th>From storage</th><th>To charging</th><th>Charge, %</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="panel res"><span id="rBillT">Monthly bill</span><b id="rBill">—</b><s class="res__was" id="rBillWas" title="Without storage"></s></div>
+      <div class="panel res res--hl" id="rYearT"><span>Savings per year</span><b id="rYear">—</b></div>
+      <div class="panel res"><span>Turnkey cost</span><b id="rInv">—</b></div>
+      <div class="panel res"><span>Payback</span><b id="rPb">—</b><div class="rmeter" id="rPbM"><div class="rmeter__t"><i></i></div><small id="rPbSub"></small></div></div>
+      <div class="panel res" id="rBackT"><span>In an outage</span><b id="rBack">—</b><div class="rhours" id="rBackH" title="On a full charge, at average use"></div></div>
+      <div class="res--cta"><p>A detailed plan from the AI agent — free</p><a href="assistant.html" class="btn btn--volt btn--sm"><span>Discuss your project</span></a></div>
+    </div>
+    <div class="how" aria-labelledby="howT">
+      <h2 class="how__t" id="howT">How we calculate</h2>
+      <dl class="how__g">
+        <div><dt>Full connection</dt><dd>The whole site runs through the storage, nothing goes to the grid</dd></div>
+        <div><dt>Home price</dt><dd>₴4.32 incl. VAT; night ×0.5 or ×0.4, peak ×1.5</dd></div>
+        <div><dt>Business price</dt><dd>DAM, last 30 days + ₴0.74 transmission, excl. VAT</dd></div>
+        <div><dt>Consumption</dt><dd>Monthly ÷ 30.4, spread by the pattern</dd></div>
+        <div><dt>Storage</dt><dd>Charges in the cheapest hours if the gap is &gt; ₴0.5; up to 2 cycles a day</dd></div>
+        <div><dt>Payback</dt><dd>Turnkey cost ÷ savings per year</dd></div>
+        <div><dt>Battery life</dt><dd><span id="howCycles">6,000 cycles</span>, up to 15 years</dd></div>
+        <div><dt>In an outage</dt><dd>Usable capacity ÷ average use</dd></div>
+      </dl>
+      <div class="how__x"><span>Not included</span><i>connection fee</i><i>maintenance</i><i>capacity loss</i><i>seasonal prices</i><i>weekends</i><i>loans</i><i>inflation</i><i>tariff changes</i></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec--tight" id="stock" aria-labelledby="stockT">
+  <div class="wrap">
+    <div class="sec__head">
+      <div><p class="eyebrow" data-reveal><b>●</b> From our stock</p><h2 class="h2" id="stockT" data-reveal>What we’d install <em>for these numbers</em></h2></div>
+    </div>
+    <div id="kitRec"></div>
+  </div>
+</section>
+
+<section class="sec--tight" aria-label="What’s next">
+  <div class="wrap">
+    <div class="next">
+      <a class="card" href="request.html" data-reveal><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path pathLength="1" d="M9 7V6a3 3 0 0 1 6 0v1"/></svg></div><h3>Request</h3><p>An engineer arranges a site survey.</p><span class="link">Go to the request →</span></a>
+      <a class="card" href="assistant.html" data-reveal><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 5h16v11H9l-5 4z"/><path pathLength="1" d="M12.6 7.6l-2.2 3.2h2.2l-1 2.6"/></svg></div><h3>A plan from the AI agent</h3><p>Placement, connection, installation, documents.</p><span class="link">Open the AI agent →</span></a>
+      <a class="card" href="turnkey.html" data-reveal><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M4 20V9l8-5 8 5v11z"/><path pathLength="1" d="M9 20v-6h6v6"/></svg></div><h3>Turnkey installation</h3><p>Survey, ATS switchboard, installation, service.</p><span class="link">What’s included →</span></a>
+    </div>
+    <p class="srcs">Sources: DAM — JSC “Market Operator”; transmission — NEURC, 2026; household tariff — Cabinet of Ministers PSO resolution. Equipment prices are retail, incl. VAT.</p>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div><a href="index.html" class="logo"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="8" width="20" height="14" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="24.6" y="12.4" width="2.6" height="5.2" rx="1.1" fill="currentColor"/><path d="M14.6 10.4l-3.9 5.3h3.4l-1.4 4 4.3-5.6h-3.4l1-3.7z" fill="#C9F25C"/></svg><span class="logo__word" data-brand>NRGT</span></a><p style="margin:14px 0 0;max-width:300px;line-height:1.6">Energy storage with turnkey installation.</p></div>
+      <div><h4>Equipment</h4><ul><li><a href="equipment.html">Catalogue</a></li><li><a href="equipment.html?cat=kits">Ready kits</a></li><li><a href="equipment.html?who=osbb">For apartment buildings</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="turnkey.html">Turnkey installation</a></li><li><a href="calculator.html">Calculator</a></li><li><a href="assistant.html">AI agent</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="request.html">Request</a></li><li><a href="account.html">My account</a></li><li><a href="login.html">Sign in</a></li></ul></div>
+    </div>
+    <div class="foot__bot"><span>© 2026 <span data-brand>NRGT</span></span><span>Indicative prices, VAT incl.</span></div>
+  </div>
+</footer>
+<a class="asst-fab" href="assistant.html" data-asst-fab><span class="asst-fab__dot" aria-hidden="true"></span>AI agent</a>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script src="../assets/js/core.js?v=1791664617"></script>
+<script src="../assets/js/shop.js?v=1791664617"></script>
+<script src="../assets/js/prices.js?v=1791664617"></script>
+<script src="../assets/js/engine.js?v=1791664617"></script>
+<script src="../assets/js/catalog.js?v=1791664617"></script>
+<script src="../assets/js/dayflow.js?v=1791664617"></script>
+<script src="../assets/js/calculator.js?v=1791664617"></script>
+<script src="../assets/js/products.js?v=1791664617"></script>
+<script src="../assets/js/products-en.js?v=1791664617"></script>
+<script src="../assets/js/kits.js?v=1791664617"></script>
+<script src="../assets/js/pages.js?v=1791664617"></script>
+<script src="../assets/js/app-config.js?v=1791664617"></script>
+<script src="../assets/js/api.js?v=1791664617"></script>
+<script src="../assets/js/account.js?v=1791664617"></script>
+<script src="../assets/js/nav.js?v=1791664617"></script>
+</body>
+</html>
